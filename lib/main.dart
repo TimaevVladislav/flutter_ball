@@ -6,15 +6,23 @@ void main() => runApp(
       ),
     );
 
-class MainPage extends StatefulWidget {
+class Ball extends StatefulWidget {
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<Ball> createState() => _BallState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return Text("Testing");
+  }
+}
+
+class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        body: Ball(),
         backgroundColor: Colors.blue.shade900,
         appBar: AppBar(
             backgroundColor: Colors.blue.shade800,
